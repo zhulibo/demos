@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0759b118-4c40-455a-93a0-d79114c824c4" name="Default" comment="" />
+    <list default="true" id="0759b118-4c40-455a-93a0-d79114c824c4" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitattributes" afterPath="$PROJECT_DIR$/.gitattributes" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -14,11 +17,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="reset.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="reset.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/项目基础文件-mobile/css/reset.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="654">
               <caret line="69" column="1" lean-forward="true" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitattributes" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitattributes">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="6" lean-forward="true" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -44,6 +57,7 @@
       <list>
         <option value="$PROJECT_DIR$/项目基础文件-mobile/css/reset.css" />
         <option value="$PROJECT_DIR$/项目基础文件-pc/css/reset.css" />
+        <option value="$PROJECT_DIR$/.gitattributes" />
       </list>
     </option>
   </component>
@@ -119,12 +133,12 @@
       <option name="presentableId" value="Default" />
       <updated>1508374166290</updated>
       <workItem from="1508374168703" duration="616000" />
-      <workItem from="1509345802771" duration="268000" />
+      <workItem from="1509345802771" duration="866000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="884000" />
+    <option name="totallyTimeSpent" value="1482000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="148" y="20" width="1418" height="860" extended-state="0" />
@@ -194,6 +208,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="654">
           <caret line="69" column="1" lean-forward="true" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="6" lean-forward="true" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
           <folding />
         </state>
       </provider>
