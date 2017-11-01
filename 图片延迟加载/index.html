@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>Document</title>
+    <!-- 重置样式 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- 主样式 -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- jq -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <style>
+        ul {
+            padding-bottom: 10em;
+        }
+
+        li {
+            float: left;
+            margin-left: 6%;
+            margin-top: 6%;
+            width: 40%;
+        }
+
+        img {
+            transition: all 1s;
+        }
+    </style>
+</head>
+
+<body>
+<ul class="clearfix">
+    <li><img data-src="img/1.jpg" src="img/flower.png" alt=""></li>
+    <li><img data-src="img/2.jpg" src="img/flower.png" alt=""></li>
+    <li><img data-src="img/1.jpg" src="img/flower.png" alt=""></li>
+    <li><img data-src="img/2.jpg" src="img/flower.png" alt=""></li>
+    <li><img data-src="img/1.jpg" src="img/flower.png" alt=""></li>
+    <li><img data-src="img/2.jpg" src="img/flower.png" alt=""></li>
+    <li><img data-src="img/1.jpg" src="img/flower.png" alt=""></li>
+    <li><img data-src="img/2.jpg" src="img/flower.png" alt=""></li>
+    <li><img data-src="img/1.jpg" src="img/flower.png" alt=""></li>
+    <li><img data-src="img/2.jpg" src="img/flower.png" alt=""></li>
+    <li><img data-src="img/1.jpg" src="img/flower.png" alt=""></li>
+    <li><img data-src="img/2.jpg" src="img/flower.png" alt=""></li>
+    <li><img data-src="img/1.jpg" src="img/flower.png" alt=""></li>
+    <li><img data-src="img/2.jpg" src="img/flower.png" alt=""></li>
+    <li><img data-src="img/1.jpg" src="img/flower.png" alt=""></li>
+    <li><img data-src="img/2.jpg" src="img/flower.png" alt=""></li>
+    <li><img data-src="img/1.jpg" src="img/flower.png" alt=""></li>
+    <li><img data-src="img/2.jpg" src="img/flower.png" alt=""></li>
+</ul>
+<script>
+
+    var imgIndex = 0;
+    var winH = $(window).height();
+    var img = $('img');
+    var imgNum = img.length;
+
+    $(function () {
+        showImg();
+    })
+
+    $(window).scroll(function () {
+        showImg();
+    })
+
+    function showImg() {
+        var scrollTop = $(window).scrollTop();
+        for (var i = imgIndex; i < imgNum; i++) {
+            var imgTop = img.eq(i).offset().top;
+            if (imgTop < winH + scrollTop - 100) {
+                img.eq(i).attr('src', function () {
+                    return img.eq(i).attr('data-src')
+                })
+                imgIndex++;
+                console.log(imgIndex);
+            }
+        }
+    }
+</script>
+</body>
+
+</html>
