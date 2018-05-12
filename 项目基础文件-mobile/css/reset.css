@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 input, select, textarea {
     color: inherit;
     font: inherit;
-    outline: none;
+    outline: none; // chrome下，获得焦点时有虚线框
     border: 1px solid #ccc;
 }
 button{
@@ -58,9 +58,10 @@ button{
     outline: none;
 }
 img {
+    display: inline-block; // 火狐下，img没有src属性时，设置宽高不生效
     max-width: 100%;
     vertical-align: bottom;
-    border: none;
+    border: none; // 去掉ie8-10黑边
 }
 .clearfix:after {
     content: "\200B";
