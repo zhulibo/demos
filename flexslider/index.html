@@ -2,50 +2,50 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <!-- 重置样式 -->
-    <link rel="stylesheet" href="css/reset.css">
-    <!-- 主样式 -->
-    <link rel="stylesheet" href="css/main.css">
-    <!-- jq -->
-    <script src="js/jquery-1.9.1.min.js"></script>
-    <!-- 轮播图 -->
-    <script src="js/jquery.flexslider.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- 重置样式 -->
+  <link rel="stylesheet" href="css/reset.css">
+  <!-- 主样式 -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- jq -->
+  <script src="js/jquery-1.9.1.min.js"></script>
+  <!-- 轮播图 -->
+  <script src="js/jquery.flexslider.js"></script>
 </head>
 
 <body>
-    <!-- 轮播图 -->
-    <div class="flexslider">
-        <ul class="slides">
-            <li>
-                <img src="img/1.png" />
-            </li>
-            <li>
-                <img src="img/2.png" />
-            </li>
-            <li>
-                <img src="img/1.png" />
-            </li>
-            <li>
-                <img src="img/2.png" />
-            </li>
-        </ul>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $('.flexslider').flexslider({
-                    animation: "slide", // "fade" or "slide"图片变换方式：淡入淡出或者滑动
-                    directionNav: true, //箭头
-                    controlNav: true, //圆点
-                    slideshowSpeed: 4000, // 自动播放速度毫秒
-                    animationSpeed: 400, //滚动效果播放时长
-                    pauseOnHover: true, //hover暂停
-                });
-            });
-        </script>
-    </div>
+<!-- 轮播图 -->
+<div class="flexslider">
+  <ul class="slides">
+    <li>
+      <img src="img/1.png"/>
+    </li>
+    <li>
+      <img src="img/2.png"/>
+    </li>
+    <li>
+      <img src="img/1.png"/>
+    </li>
+    <li>
+      <img src="img/2.png"/>
+    </li>
+  </ul>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.flexslider').flexslider({
+        animation: "slide", // "fade" or "slide"图片变换方式：淡入淡出或者滑动
+        directionNav: true, //箭头
+        controlNav: true, //圆点
+        slideshowSpeed: 4000, // 自动播放速度毫秒
+        animationSpeed: 400, //滚动效果播放时长
+        pauseOnHover: true, //hover暂停
+      });
+    });
+  </script>
+</div>
 </body>
 
 </html>

@@ -2,154 +2,160 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <!-- 重置样式 -->
-    <link rel="stylesheet" href="css/reset.css">
-    <!-- 主样式 -->
-    <link rel="stylesheet" href="css/main.css">
-    <!-- jq -->
-    <script src="js/jquery-1.9.1.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- 重置样式 -->
+  <link rel="stylesheet" href="css/reset.css">
+  <!-- 主样式 -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- jq -->
+  <script src="js/jquery-1.9.1.min.js"></script>
 </head>
 
 <body>
-    <style media="screen">
-        .container {
-            margin-bottom: 1000px;
-        }
-        .container div {
-            margin-left: auto;
-            margin-right: auto;
-            width: 800px;
-            height: 500px;
-            color: #fff;
-            background-color: #666;
-            font-size: 30px;
-            display: -ms-flex;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-        }
-        .container div:nth-child(2n){
-            background-color: #aaa;
-        }
-        .fixed {
-            position: fixed;
-            top: 200px;
-            left: 50%;
-            margin-left: -500px;
-            width: 80px;
-        }
-        .fixed a {
-            display: block;
-            margin-bottom: 10px;
-            height: 30px;
-            line-height: 30px;
-            font-size: 16px;
-            text-align: center;
-            background-color: #ddd;
-            cursor: pointer;
-            -webkit-transition: all .5s;
-            transition: all .5s;
-        }
-        .fixed a.abc {
-            border-left: 1px solid #000;
-        }
-        .fixed a.on {
-            background-color: #999;
-        }
-    </style>
-    <div class="container">
-        <div class="floor">1L</div>
-        <div class="floor">2L</div>
-        <div class="floor">3L</div>
-        <div class="floor">4L</div>
-        <div class="floor">5L</div>
-    </div>
-    <div class="fixed">
-        <a class="abc on">11</a>
-        <a class="abc">22</a>
-        <a class="abc">33</a>
-        <a class="abc">44</a>
-        <a class="abc">55</a>
-    </div>
-    <script type="text/javascript">
-        // 点击跳转到指定楼层
-        $('.fixed a').click(function() {
-                var current = $(this).index();
-                var scrollTop = $('.floor').eq(current).offset().top;
-                $("body,html").animate({
-                    scrollTop: scrollTop
-                }, 300);
-                $('.fixed a').removeClass('on');
-                $(this).addClass('on');
-            })
-        // 滚动屏幕时关联楼层
-        var currentIndex;
-        $(window).scroll(function() {
-            var top = $(window).scrollTop();
-            $('.floor').each(function() {
-                var floorTop = $(this).offset().top;
-                if (top > floorTop - 200) {
-                    currentIndex = $(this).index('.floor');
-                    // console.log(currentIndex);
-                } else {
-                    return false;
-                }
-            })
-            var onSwitch = $('.fixed a').eq(currentIndex).hasClass('on');
-            if (onSwitch == false) {
-                $('.fixed a').removeClass('on');
-                $('.fixed a').eq(currentIndex).addClass('on');
-            }
-        })
-    </script>
+<style media="screen">
+  .container {
+    margin-bottom: 1000px;
+  }
 
-    <!-- <script type="text/javascript">
-        // 点击跳转到指定楼层
-        var navA = document.querySelectorAll('.fixed a');
-        var floorDiv = document.querySelectorAll('.floor');
-        for (var i = 0; i < navA.length; i++) {
+  .container div {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: 500px;
+    color: #fff;
+    background-color: #666;
+    font-size: 30px;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .container div:nth-child(2n) {
+    background-color: #aaa;
+  }
+
+  .fixed {
+    position: fixed;
+    top: 200px;
+    left: 50%;
+    margin-left: -500px;
+    width: 80px;
+  }
+
+  .fixed a {
+    display: block;
+    margin-bottom: 10px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #ddd;
+    cursor: pointer;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+
+  .fixed a.abc {
+    border-left: 1px solid #000;
+  }
+
+  .fixed a.on {
+    background-color: #999;
+  }
+</style>
+<div class="container">
+  <div class="floor">1L</div>
+  <div class="floor">2L</div>
+  <div class="floor">3L</div>
+  <div class="floor">4L</div>
+  <div class="floor">5L</div>
+</div>
+<div class="fixed">
+  <a class="abc on">11</a>
+  <a class="abc">22</a>
+  <a class="abc">33</a>
+  <a class="abc">44</a>
+  <a class="abc">55</a>
+</div>
+<script type="text/javascript">
+  // 点击跳转到指定楼层
+  $('.fixed a').click(function () {
+    var current = $(this).index();
+    var scrollTop = $('.floor').eq(current).offset().top;
+    $("body,html").animate({
+      scrollTop: scrollTop
+    }, 300);
+    $('.fixed a').removeClass('on');
+    $(this).addClass('on');
+  })
+  // 滚动屏幕时关联楼层
+  var currentIndex;
+  $(window).scroll(function () {
+    var top = $(window).scrollTop();
+    $('.floor').each(function () {
+      var floorTop = $(this).offset().top;
+      if (top > floorTop - 200) {
+        currentIndex = $(this).index('.floor');
+        // console.log(currentIndex);
+      } else {
+        return false;
+      }
+    })
+    var onSwitch = $('.fixed a').eq(currentIndex).hasClass('on');
+    if (onSwitch == false) {
+      $('.fixed a').removeClass('on');
+      $('.fixed a').eq(currentIndex).addClass('on');
+    }
+  })
+</script>
+
+<!-- <script type="text/javascript">
+    // 点击跳转到指定楼层
+    var navA = document.querySelectorAll('.fixed a');
+    var floorDiv = document.querySelectorAll('.floor');
+    for (var i = 0; i < navA.length; i++) {
+        (function(index) {
+            navA[i].onclick = function() {
+                var scrollTop = floorDiv[index].offsetTop;
+                document.body.scrollTop = scrollTop;
+                for (var j = 0; j < navA.length; j++) {
+                    var reg = new RegExp('(\\s|^)' + 'on' + '(\\s|$)');
+                    navA[j].className = navA[j].className.replace(reg, ' ');
+                }
+                navA[index].className += ' on';
+                // for (var j = 0; j < navA.length; j++) {
+                //     navA[j].classList.remove('on');
+                // }
+                // navA[index].classList.add('on');
+            }
+        })(i)
+    }
+    // 滚动屏幕时关联楼层
+    var currentIndex;
+    window.onscroll = function() {
+        var top = document.body.scrollTop;
+        for (var i = 0; i < floorDiv.length; i++) {
             (function(index) {
-                navA[i].onclick = function() {
-                    var scrollTop = floorDiv[index].offsetTop;
-                    document.body.scrollTop = scrollTop;
-                    for (var j = 0; j < navA.length; j++) {
-                        var reg = new RegExp('(\\s|^)' + 'on' + '(\\s|$)');
-                        navA[j].className = navA[j].className.replace(reg, ' ');
-                    }
-                    navA[index].className += ' on';
-                    // for (var j = 0; j < navA.length; j++) {
-                    //     navA[j].classList.remove('on');
-                    // }
-                    // navA[index].classList.add('on');
+                var floorTop = floorDiv[index].offsetTop;
+                if (top > floorTop - 200) {
+                    currentIndex = index;
                 }
             })(i)
         }
-        // 滚动屏幕时关联楼层
-        var currentIndex;
-        window.onscroll = function() {
-            var top = document.body.scrollTop;
-            for (var i = 0; i < floorDiv.length; i++) {
-                (function(index) {
-                    var floorTop = floorDiv[index].offsetTop;
-                    if (top > floorTop - 200) {
-                        currentIndex = index;
-                    }
-                })(i)
-            }
-            for (var i = 0; i < navA.length; i++) {
-                var reg = new RegExp('(\\s|^)' + 'on' + '(\\s|$)');
-                navA[i].className = navA[i].className.replace(reg, '');
-            }
-            navA[currentIndex].className += ' on';
+        for (var i = 0; i < navA.length; i++) {
+            var reg = new RegExp('(\\s|^)' + 'on' + '(\\s|$)');
+            navA[i].className = navA[i].className.replace(reg, '');
         }
-    </script> -->
+        navA[currentIndex].className += ' on';
+    }
+</script> -->
 </body>
 
 </html>

@@ -2,66 +2,67 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="format-detection" content="telephone=no">
-    <title>Document</title>
-    <!-- 重置样式 -->
-    <link rel="stylesheet" href="css/reset.css">
-    <!-- 主样式 -->
-    <link rel="stylesheet" href="css/main.css">
-    <!-- jq -->
-    <script src="js/jquery-2.1.4.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title>Document</title>
+  <!-- 重置样式 -->
+  <link rel="stylesheet" href="css/reset.css">
+  <!-- 主样式 -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- jq -->
+  <script src="js/jquery-2.1.4.min.js"></script>
 </head>
 
 <body>
-    <style media="screen">
-        .user_tip {
-            display: -webkit-flex;
-            display: -ms-flex;
-            display: flex;
-            padding: .5em 1em;
-            background-color: #eee;
-        }
+<style media="screen">
+  .user_tip {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    padding: .5em 1em;
+    background-color: #eee;
+  }
 
-        .user_tip .pic {
-            width: 2em;
-            background: url(img/laba.png) center center/auto 1.6em no-repeat;
-        }
+  .user_tip .pic {
+    width: 2em;
+    background: url(img/laba.png) center center/auto 1.6em no-repeat;
+  }
 
-        .user_tip .txt {
-            position: relative;
-            flex: 1;
-            overflow-y: hidden;
-            height: 1.4em;
-            line-height: 1.4;
-            padding-left: .5em;
-        }
-    </style>
-    <!-- 提示 -->
-    <div class="user_tip">
-        <div class="pic"></div>
-        <div class="txt">
-            <div class="tip_wrap">
-                <p><a href="">公告111111111</a></p>
-                <p><a href="">公告222222</a></p>
-                <p><a href="">公告3333333333</a></p>
-            </div>
-        </div>
+  .user_tip .txt {
+    position: relative;
+    flex: 1;
+    overflow-y: hidden;
+    height: 1.4em;
+    line-height: 1.4;
+    padding-left: .5em;
+  }
+</style>
+<!-- 提示 -->
+<div class="user_tip">
+  <div class="pic"></div>
+  <div class="txt">
+    <div class="tip_wrap">
+      <p><a href="">公告111111111</a></p>
+      <p><a href="">公告222222</a></p>
+      <p><a href="">公告3333333333</a></p>
     </div>
-    <script type="text/javascript">
-        function timer(obj) {
-            $(obj).animate({
-                marginTop: "-1.4em"
-            }, 500, function() {
-                $(this).css({
-                    marginTop: "0"
-                }).find("p:first").appendTo(this);
-            })
-        }
-        var time = setInterval('timer(".tip_wrap")', 3500);
-    </script>
+  </div>
+</div>
+<script type="text/javascript">
+  function timer(obj) {
+    $(obj).animate({
+      marginTop: "-1.4em"
+    }, 500, function () {
+      $(this).css({
+        marginTop: "0"
+      }).find("p:first").appendTo(this);
+    })
+  }
+
+  var time = setInterval('timer(".tip_wrap")', 3500);
+</script>
 </body>
 
 </html>

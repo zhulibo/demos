@@ -1,45 +1,55 @@
 @charset "utf-8";
 * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
+
 body {
-    font-size: 14px!important;
-    line-height: 1.4!important;
-    font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
-    color: #333;
-    background-color: #eee;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+  color: #333;
+  background-color: #eee;
 }
+
 a {
-    color: inherit;
-    outline: none;
-    text-decoration: none;
+  color: inherit;
+  outline: none;
+  text-decoration: none;
 }
+
 h1, h2, h3, h4, h5, h6 {
-    color: inherit;
-    font: inherit;
+  color: inherit;
+  font: inherit;
 }
+
 input, select, textarea {
-    color: inherit;
-    font: inherit;
-    outline: none; // chrome下，获得焦点时有虚线框
-    border: 1px solid #ccc;
+  color: inherit;
+  font: inherit;
+  /*chrome下，获得焦点时有虚线框*/
+  outline: none;
+  border: 1px solid #ccc;
 }
+
 img {
-    display: inline-block; // 火狐下，img没有src属性时，设置宽高不生效
-    max-width: 100%;
-    vertical-align: bottom;
-    border: none; // 去掉ie8-10黑边
+  /*火狐下，img没有src属性时，设置宽高不生效*/
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: bottom;
+  /*去掉ie8-10黑边*/
+  border: none;
 }
+
 .clearfix:after {
-    content: "\200B";
-    display: block;
-    height: 0;
-    clear: both;
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
 }
+
 .wrap {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
 }
