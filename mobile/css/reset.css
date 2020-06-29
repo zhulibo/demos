@@ -5,27 +5,46 @@
   list-style: none;
 }
 
-@media screen and (max-width: 350px) {
+html {
+  min-height: 100%;
+  /*1rem = 16px*/
+  font-size: 6.25%;
+  /*1rem = 16px*6.25% 1px*/
+}
+
+@media screen and (max-width:350px) {
   html {
-    font-size: 90px !important;
+    font-size: 5.3%;
+    /*1rem = 0.848px*/
+    /*14rem = 11.872px*/
+    /*16rem = 13.568px*/
   }
 }
 
-@media screen and (min-width: 351PX) and (max-width: 380PX) {
+@media screen and (min-width:351px) {
   html {
-    font-size: 100px !important;
+    font-size: 5.5%;
+    /*1rem = 0.88px*/
+    /*14rem = 12.32px*/
+    /*16rem = 14.08px*/
   }
 }
 
-@media screen and (min-width: 381PX) and (max-width: 410PX) {
+@media screen and (min-width:375px) {
   html {
-    font-size: 110px !important;
+    font-size: 6%;
+    /*1rem = 0.96px*/
+    /*14rem = 13.44px*/
+    /*16rem = 15.36px*/
   }
 }
 
-@media screen and (min-width: 411px) {
+@media screen and (min-width:400px) {
   html {
-    font-size: 120px !important;
+    font-size: 7%;
+    /*1rem = 1.12px*/
+    /*14rem = 15.68px*/
+    /*16rem = 17.92px*/
   }
 }
 
