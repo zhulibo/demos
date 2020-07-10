@@ -1,0 +1,12 @@
+@charset "utf-8";
+.clearfix:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.wrap {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+}

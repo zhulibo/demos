@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- 重置样式 -->
+  <link rel="stylesheet" href="css/reset.css">
+  <!-- 主样式 -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- jq -->
+  <script src="js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+<script>
+  // 获取url中参数
+  var params = {} // 参数存放的对象
+  var key, value;  // 键、值
+  var str = location.href; // 整个url
+  str = str.substr(str.indexOf("?") + 1); // 从?下标+1处截取到最后
+  var arr = str.split("&"); // 以&分割参数
+
+  for (var i = 0; i < arr.length; i++) {
+    var num = arr[i].indexOf("=");
+    if (num > 0) {
+      key = arr[i].substring(0, num); // 从0到num
+      value = arr[i].substr(num + 1); // 从num + 1到最后
+      params[key] = value;
+    }
+  }
+</script>
+</body>
+
+</html>
