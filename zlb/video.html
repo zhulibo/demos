@@ -7,7 +7,7 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="format-detection" content="telephone=no">
-  <title>Document</title>
+  <title>支链保</title>
   <!-- 重置样式 -->
   <link rel="stylesheet" href="css/reset.css">
   <!-- 公共样式 -->
@@ -52,27 +52,27 @@
       var html = '';
       $.each(data.information.records, function (index, val) {
         html += '<li>\n' +
-          '    <video src="' + val.url + '"></video>\n' +
-          '    <div class="bg"></div>\n' +
+          '    <video controls poster="' + val.image + '" src="' + val.url + '" preload="auto"></video>\n' +
+          // '    <div class="bg"></div>\n' +
           '  </li>'
       });
+
       $('.video-ct').html(html);
 
       // 播放视频
-      $('.video-ct .bg').click(function () {
-        var media = $(this).parent().find('video')[0];
-        if (media.paused) {
-          media.play();
-          $(this).addClass('playing')
-        } else {
-          media.pause();
-          $(this).removeClass('playing')
-        }
-      })
+      // $('.video-ct .bg').click(function () {
+      //   var media = $(this).parent().find('video')[0];
+      //   if (media.paused) {
+      //     media.play();
+      //     $(this).addClass('playing')
+      //   } else {
+      //     media.pause();
+      //     $(this).removeClass('playing')
+      //   }
+      // })
 
     }
   });
-
 
 </script>
 </body>

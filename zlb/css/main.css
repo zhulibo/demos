@@ -1,8 +1,16 @@
 @charset "utf-8";
 body{
   overflow-x: hidden;
-  background: url(../img/2.png) center top/100% 100% no-repeat;
-  background-attachment: fixed;
+}
+body:after{
+  content: "";
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url(../img/2.png) center center/100% 100% no-repeat;
 }
 .nav{
   font-size: 18rem;
@@ -48,6 +56,7 @@ body{
   text-align: center;
 }
 .btn-ct .btn{
+  display: block;
   color: #fff;
   height: 2.6em;
   line-height: 2.6;
@@ -78,8 +87,8 @@ body{
   position: relative;
   overflow: hidden;
   margin-top: 2em;
-  border: .3em solid #2b2b2b;
-  border-radius: .2em;
+  border: .4em solid #2b2b2b;
+  border-radius: .4em;
   background-color: #2b2b2b;
 }
 .video-ct li video{
@@ -102,12 +111,12 @@ body{
   margin-right: auto;
   width: 20em;
   overflow: hidden;
-  border: .4em solid #2b2b2b;
-  border-radius: .6em;
-  background-color: #2b2b2b;
+  border: .4em solid #333;
+  border-radius: .4em;
+  background-color: #333;
 }
 .section-ct .img-ct{
-  border-bottom: .3em solid #2b2b2b;
+  border-bottom: .3em solid #333;
 }
 .section-ct .img-ct img{
   width: 100%;
@@ -118,16 +127,21 @@ body{
   background-color: #fff;
 }
 .section-ct .info h2{
-  font-size: 18rem;
+  font-size: 20rem;
+  font-weight: bold;
 }
 .section-ct .info h2 span{
   margin-left: 1em;
   font-size: 14rem;
+  font-weight: normal;
 }
 .section-ct .info h3{
   margin-top: .3em;
   margin-bottom: .2em;
-  font-size: 16rem;
+  font-size: 14rem;
+}
+.section-ct .info p{
+  font-size: 13rem;
 }
 .page-nav{
   position: fixed;
