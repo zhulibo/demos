@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title>支链保</title>
+  <!-- 重置样式 -->
+  <link rel="stylesheet" href="css/reset.css">
+  <!-- 公共样式 -->
+  <link rel="stylesheet" href="css/common.css">
+  <!-- 主样式 -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- jq -->
+  <script src="js/jquery-2.1.4.min.js"></script>
+</head>
+
+<body>
+  <div class="nav nav-link">
+    <ul>
+
+    </ul>
+  </div>
+  <script>
+
+    // 获取url中参数
+    var params = {} // 参数存放的对象
+    var key, value;  // 键、值
+    var str = location.href; // 整个url
+    str = str.substr(str.indexOf("?") + 1); // 从?下标+1处截取到最后
+    var arr = str.split("&"); // 以&分割参数
+
+    for (var i = 0; i < arr.length; i++) {
+      var num = arr[i].indexOf("=");
+      if (num > 0) {
+        key = arr[i].substring(0, num); // 从0到num
+        value = arr[i].substr(num + 1); // 从num + 1到最后
+        params[key] = value;
+      }
+    }
+
+    var html
+    if (params.type == 1){
+      html = '<li><a href="./video.html?type=1">国家项目</a></li>\n' +
+        '      <li><a href="./video.html?type=2">省级项目</a></li>'
+    } else if (params.type == 2) {
+      html = '<li><a href="./video.html?type=3">市场需求</a></li>\n' +
+        '      <li><a href="./video.html?type=4">销售渠道</a></li>'
+    } else if (params.type == 3) {
+      html = '<li><a href="./video.html?type=5">专家服务</a></li>\n' +
+        '      <li><a href="./video.html?type=6">技术应用</a></li>'
+    } else if (params.type == 4) {
+      html = '<li><a href="./video.html?type=7">大额融资</a></li>\n' +
+        '      <li><a href="./video.html?type=8">小额融资</a></li>'
+    }
+    $('.nav ul').html(html)
+  </script>
+</body>
+
+</html>

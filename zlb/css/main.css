@@ -30,6 +30,13 @@ body:after{
   border-radius: .2em;
   border: 1px solid #2b2b2b;
 }
+.nav-link li{
+  margin-top: 2em;
+  width: 15.5em;
+}
+.nav-link li:last-child{
+  margin-top: 1em;
+}
 .nav li a{
   display: block;
   line-height: 2;
